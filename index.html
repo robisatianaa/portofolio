@@ -1,94 +1,112 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Robi Satiana — Legal Officer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false">
-  <span></span><span></span><span></span>
-</button>
-
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-top">
-    <div class="portrait-frame">
-      <img class="portrait" src="robi-portrait.jpg" alt="Foto Robi Satiana">
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      <span class="badge-text">Available for New Opportunities</span>
     </div>
 
-    <h1 class="name">Robi Satiana</h1>
-    <p class="headline">Legal Officer <span class="dot">/</span> Compliance <span class="dot">/</span> Employment Law <span class="dot">/</span> Corporate Legal</p>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-    <nav class="nav" aria-label="Navigasi utama">
-      <a href="#profil" class="nav-link active" data-target="profil"><span class="nav-num">Pasal 01</span>Profil</a>
-      <a href="#pengalaman" class="nav-link" data-target="pengalaman"><span class="nav-num">Pasal 02</span>Pengalaman</a>
-      <a href="#kompetensi" class="nav-link" data-target="kompetensi"><span class="nav-num">Pasal 03</span>Kompetensi</a>
-      <a href="#portofolio" class="nav-link" data-target="portofolio"><span class="nav-num">Pasal 04</span>Portofolio</a>
-      <a href="#pendidikan" class="nav-link" data-target="pendidikan"><span class="nav-num">Pasal 05</span>Pendidikan</a>
-      <a href="#kontak" class="nav-link" data-target="kontak"><span class="nav-num">Pasal 06</span>Kontak</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#work">Work <sup>[3]</sup></a>
+      <a href="#service">Service <sup>[5]</sup></a>
+      <a href="#experience">Experience <sup>[2y+]</sup></a>
+      <a href="#contact">Contact</a>
     </nav>
+
+    <a href="#contact" class="btn-pill btn-dark nav-cta">Let's Talk <span class="arrow">↗</span></a>
   </div>
+</header>
 
-  <div class="sidebar-bottom">
-    <p class="legal-note">Bekasi, Indonesia.<br>Berlaku sejak 2023.</p>
-  </div>
-</aside>
+<main>
 
-<div class="scrim" id="scrim"></div>
+  <section class="hero">
+    <h1 class="hero-name" aria-label="Robi Satiana">
+      <span class="name-outline">ROBI</span><span class="name-solid">SATIANA</span>
+    </h1>
 
-<main class="content" id="content">
-
-  <section class="section hero" id="profil" data-section>
-    <p class="eyebrow"><span class="eyebrow-num">Pasal 01</span> — Profil</p>
-    <h2 class="hero-title">Helping Companies<br>Stay Compliant with<br><em>Indonesian Regulations.</em></h2>
-    <p class="hero-sub">Legal professional yang teliti dan analitis dengan keahlian pada kepatuhan hukum korporasi, perizinan usaha, dan manajemen risiko kontrak. Berpengalaman mengelola pelaporan OSS RBA &amp; LKPM, administrasi SIINas, serta koordinasi dengan Notaris untuk RUPS Sirkuler dan RUPS Tahunan — berkomitmen memberikan dukungan legal yang akurat dan berorientasi solusi bagi operasional bisnis.</p>
-    <div class="hero-actions">
-      <a href="#portofolio" class="btn btn-primary">Lihat Portofolio <span class="btn-arrow">→</span></a>
-      <a href="#kontak" class="btn btn-ghost">Hubungi Saya</a>
+    <div class="hero-photo">
+      <img src="robi-portrait.png" alt="Robi Satiana">
     </div>
 
-    <dl class="stat-strip">
-      <div class="stat"><dt>Fokus</dt><dd>Employment &amp; Corporate Law</dd></div>
-      <div class="stat"><dt>Pendidikan</dt><dd>S.H., Universitas Esa Unggul</dd></div>
-      <div class="stat"><dt>Prinsip</dt><dd>Kepatuhan &gt; Kecepatan</dd></div>
-    </dl>
+    <div class="hero-row">
+      <div class="hero-left">
+        <h2 class="role">Legal Officer</h2>
+        <p class="role-desc">Helping companies stay compliant with Indonesian regulations — from contracts to corporate licensing.</p>
+        <a href="#contact" class="btn-pill btn-dark">Let's collaborate <span class="arrow">↗</span></a>
+      </div>
+
+      <div class="hero-right">
+        <a href="https://linkedin.com/in/robisatiana" target="_blank" rel="noopener" class="btn-pill btn-outline">
+          <span class="pill-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10.5v6M8 7.7v.01M12 16.5v-3.7c0-1.4 1-2.3 2.2-2.3 1.2 0 1.8.9 1.8 2.3v3.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          LinkedIn
+        </a>
+        <a href="mailto:robisatianaa@gmail.com" class="btn-pill btn-outline">
+          <span class="pill-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Email
+        </a>
+        <a href="https://wa.me/6285817286483" target="_blank" rel="noopener" class="btn-pill btn-outline">
+          <span class="pill-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 8.7c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .6.5.2.5.6 1.4.6 1.5.1.1.1.3 0 .4-.1.2-.1.3-.3.4-.1.2-.3.3-.4.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.5 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1 .2-.3.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.4.1.8-.1 1.2-.2.5-1.1 1-1.9 1.1-.7.1-1.5.1-4.7-1.9-3.2-2-3.9-3.6-4-3.9-.1-.3-.9-1.4-.9-2.7 0-1.3.7-1.9.9-2.2Z" stroke="currentColor" stroke-width="1.3"/></svg>
+          </span>
+          WhatsApp
+        </a>
+        <a href="mailto:robisatianaa@gmail.com?subject=Request%20CV%20-%20Robi%20Satiana" class="btn-pill btn-outline">
+          <span class="pill-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 11 12 15.5 16.5 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 18.5h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          Resume
+        </a>
+      </div>
+    </div>
   </section>
 
-  <section class="section" id="pengalaman" data-section>
-    <p class="eyebrow"><span class="eyebrow-num">Pasal 02</span> — Pengalaman</p>
-    <h3 class="section-title">Riwayat Profesional</h3>
-    <p class="section-lede">Pengalaman lintas fungsi legal, HR, dan operasional bisnis — dari penyusunan kontrak hingga kepatuhan ketenagakerjaan.</p>
+  <section class="section" id="work">
+    <p class="eyebrow">[ Work ]</p>
+    <h3 class="section-title">Professional Experience</h3>
 
     <ol class="timeline">
       <li class="timeline-item">
-        <div class="timeline-date">Mei 2025 — Maret 2026</div>
+        <div class="timeline-date">May 2025 — Mar 2026</div>
         <div class="timeline-body">
           <h4>Business Operations &amp; Legal Executive</h4>
-          <p class="timeline-org">PT Cahaya Data Pertama · Jakarta Pusat</p>
+          <p class="timeline-org">PT Cahaya Data Pertama · Central Jakarta</p>
           <ul class="timeline-points">
-            <li>Menyusun, meninjau, dan menegosiasikan dokumen legal korporat &amp; komersial — MSA, PKS, NDA, addendum, dan perjanjian bipartit.</li>
-            <li>Mengelola kontrak kerja dan perpanjangan PKWT ke PKWTT sesuai regulasi ketenagakerjaan Indonesia.</li>
-            <li>Mengadministrasikan BPJS Kesehatan (eDabu) &amp; BPJS Ketenagakerjaan (SIPP), serta menangani hubungan industrial dan penyelesaian konflik.</li>
-            <li>Mengoordinasikan kepatuhan lintas fungsi HR, Finance, dan GA, serta menyusun laporan legal, HR, dan operasional mingguan.</li>
+            <li>Drafted, reviewed and negotiated corporate &amp; commercial agreements — MSA, PKS, NDA, addendums, bipartite agreements.</li>
+            <li>Managed employment contracts and PKWT-to-PKWTT conversions in line with Indonesian labor regulations.</li>
+            <li>Administered BPJS Kesehatan &amp; Ketenagakerjaan, and led employee relations across HR, Finance, and GA.</li>
+            <li>Tambahan</li>
           </ul>
         </div>
       </li>
 
       <li class="timeline-item">
-        <div class="timeline-date">Juni 2024 — Des 2024</div>
+        <div class="timeline-date">Jun 2024 — Dec 2024</div>
         <div class="timeline-body">
           <h4>HR &amp; Legal Compliance Intern</h4>
-          <p class="timeline-org">GOVOKASi Indonesia · Jakarta Selatan</p>
+          <p class="timeline-org">GOVOKASi Indonesia · South Jakarta</p>
           <ul class="timeline-points">
-            <li>Menyusun dan meninjau dokumen legal serta perjanjian kemitraan untuk klien lokal dan internasional.</li>
-            <li>Mengelola kontrak kemitraan dan turut menyusun SOP yang mengintegrasikan operasional HR dengan standar legal &amp; kepatuhan.</li>
-            <li>Merancang 3 peran strategis dengan SOP terperinci, meningkatkan efisiensi rekrutmen sebesar 25%.</li>
-            <li>Memfasilitasi wawancara kandidat dan penempatan talenta bersama tim HR.</li>
+            <li>Drafted and reviewed legal documents and partnership agreements for local and international clients.</li>
+            <li>Designed 3 strategic roles with detailed SOPs, increasing recruitment efficiency by 25%.</li>
           </ul>
         </div>
       </li>
@@ -97,139 +115,76 @@
         <div class="timeline-date">Nov 2024</div>
         <div class="timeline-body">
           <h4>Volunteer Crew &amp; Tenant Attendant</h4>
-          <p class="timeline-org">Maxwell Leadership Indonesia x Merry Riana · Tangerang Selatan</p>
+          <p class="timeline-org">Maxwell Leadership Indonesia x Merry Riana · South Tangerang</p>
           <ul class="timeline-points">
-            <li>Mendukung penyelenggaraan event dan pengelolaan booth GOVOKASi Indonesia, memastikan keterlibatan pengunjung dan kelancaran logistik.</li>
+            <li>Supported event operations and booth management, ensuring smooth visitor engagement and logistics.</li>
           </ul>
         </div>
       </li>
     </ol>
   </section>
 
-  <section class="section" id="kompetensi" data-section>
-    <p class="eyebrow"><span class="eyebrow-num">Pasal 03</span> — Kompetensi</p>
-    <h3 class="section-title">Ruang Lingkup Keahlian</h3>
-    <p class="section-lede">Sepuluh bidang praktik yang menjadi fondasi setiap pekerjaan legal — dari perancangan kontrak hingga manajemen risiko kepatuhan.</p>
+  <section class="section" id="service">
+    <p class="eyebrow">[ Service ]</p>
+    <h3 class="section-title">What I Handle</h3>
 
-    <ol class="skills-grid">
-      <li class="skill-card"><span class="skill-num">01</span><span class="skill-name">Corporate Legal Documentation &amp; Contract Drafting</span></li>
-      <li class="skill-card"><span class="skill-num">02</span><span class="skill-name">Commercial Agreement Review &amp; Negotiation</span></li>
-      <li class="skill-card"><span class="skill-num">03</span><span class="skill-name">Employment Law &amp; Labor Compliance</span></li>
-      <li class="skill-card"><span class="skill-num">04</span><span class="skill-name">OSS RBA System Administration</span></li>
-      <li class="skill-card"><span class="skill-num">05</span><span class="skill-name">Corporate Governance Support</span></li>
-      <li class="skill-card"><span class="skill-num">06</span><span class="skill-name">Employee Relations Management</span></li>
-      <li class="skill-card"><span class="skill-num">07</span><span class="skill-name">Corporate Secretarial Support</span></li>
-      <li class="skill-card"><span class="skill-num">08</span><span class="skill-name">Corporate Licensing &amp; Permit Management</span></li>
-      <li class="skill-card"><span class="skill-num">09</span><span class="skill-name">Policy &amp; SOP Development</span></li>
-      <li class="skill-card"><span class="skill-num">10</span><span class="skill-name">Business &amp; Operational Reporting</span></li>
-    </ol>
-
-    <div class="cert-block">
-      <p class="cert-label">Sertifikasi</p>
-      <ul class="cert-list">
-        <li>Pendidikan Profesi Advokat — DPN Indonesia</li>
-        <li>Teknik Penyusunan Kontrak — Ikatan Notaris Indonesia</li>
-        <li>10 Competency Job READY — Wadhwani Foundation</li>
-        <li>Recruitment Process — MySkill</li>
-        <li>ESQ Training — ESQ Leadership Center</li>
-      </ul>
+    <div class="service-list">
+      <article class="service-item"><span class="service-num">01</span><div><h4>Contract Review</h4><p>MSA, PKS, NDA and addendum review to mitigate risk before signing.</p></div></article>
+      <article class="service-item"><span class="service-num">02</span><div><h4>Compliance Projects</h4><p>OSS RBA &amp; LKPM reporting, SIINas administration, Notary coordination.</p></div></article>
+      <article class="service-item"><span class="service-num">03</span><div><h4>Legal Documentation</h4><p>Structured, traceable legal &amp; HR document archives.</p></div></article>
+      <article class="service-item"><span class="service-num">04</span><div><h4>Company Licensing</h4><p>Business permits and corporate license monitoring via OSS RBA.</p></div></article>
+      <article class="service-item"><span class="service-num">05</span><div><h4>Employment Compliance</h4><p>PKWT-to-PKWTT conversion, industrial relations, BPJS administration.</p></div></article>
     </div>
   </section>
 
-  <section class="section" id="portofolio" data-section>
-    <p class="eyebrow"><span class="eyebrow-num">Pasal 04</span> — Portofolio</p>
-    <h3 class="section-title">Cakupan Pekerjaan</h3>
-    <p class="section-lede">Lima kategori pekerjaan yang mencerminkan pendekatan menyeluruh terhadap fungsi legal perusahaan.</p>
-
-    <div class="portfolio-list">
-      <article class="portfolio-item" data-index="01">
-        <div class="portfolio-num">01</div>
-        <div class="portfolio-body">
-          <h4>Contract Review</h4>
-          <p>Peninjauan dan negosiasi klausul kontrak komersial — termasuk MSA, PKS, NDA, dan addendum — untuk memitigasi risiko sebelum dokumen ditandatangani.</p>
-        </div>
-        <div class="portfolio-tag">Legal Ops</div>
-      </article>
-
-      <article class="portfolio-item" data-index="02">
-        <div class="portfolio-num">02</div>
-        <div class="portfolio-body">
-          <h4>Compliance Projects</h4>
-          <p>Pelaporan OSS RBA &amp; LKPM, administrasi SIINas, serta koordinasi dengan Notaris untuk RUPS Sirkuler dan RUPS Tahunan.</p>
-        </div>
-        <div class="portfolio-tag">Compliance</div>
-      </article>
-
-      <article class="portfolio-item" data-index="03">
-        <div class="portfolio-num">03</div>
-        <div class="portfolio-body">
-          <h4>Legal Documentation</h4>
-          <p>Penyusunan dan pengarsipan dokumen legal &amp; HR agar tertata, terlacak, dan siap mendukung audit internal.</p>
-        </div>
-        <div class="portfolio-tag">Documentation</div>
-      </article>
-
-      <article class="portfolio-item" data-index="04">
-        <div class="portfolio-num">04</div>
-        <div class="portfolio-body">
-          <h4>Company Licensing</h4>
-          <p>Pengurusan perizinan usaha dan pemantauan izin korporat melalui sistem OSS RBA agar tetap berlaku efektif.</p>
-        </div>
-        <div class="portfolio-tag">Licensing</div>
-      </article>
-
-      <article class="portfolio-item" data-index="05">
-        <div class="portfolio-num">05</div>
-        <div class="portfolio-body">
-          <h4>Employment Compliance</h4>
-          <p>Pendampingan hubungan industrial, perpanjangan PKWT ke PKWTT, serta administrasi BPJS Kesehatan &amp; Ketenagakerjaan karyawan.</p>
-        </div>
-        <div class="portfolio-tag">Employment</div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="pendidikan" data-section>
-    <p class="eyebrow"><span class="eyebrow-num">Pasal 05</span> — Pendidikan</p>
-    <h3 class="section-title">Latar Belakang Akademik</h3>
+  <section class="section" id="experience">
+    <p class="eyebrow">[ Background ]</p>
+    <h3 class="section-title">Education &amp; Skills</h3>
 
     <div class="edu-card">
-      <div class="edu-date">Maret 2020 — Agustus 2023</div>
+      <div class="edu-date">Mar 2020 — Aug 2023</div>
       <div class="edu-body">
-        <h4>Sarjana Hukum (S.H.)</h4>
-        <p class="edu-org">Universitas Esa Unggul · Program Studi Ilmu Hukum</p>
-        <p class="edu-detail">IPK 3.74 / 4.00</p>
-        <p class="edu-thesis">Skripsi: <em>“Tinjauan Yuridis Normatif Pemindahan Ibu Kota Negara ke Kalimantan Timur Terhadap Undang-Undang Dasar (UUD) NRI Tahun 1945”</em></p>
+        <h4>Bachelor of Laws (S.H.)</h4>
+        <p class="edu-org">Universitas Esa Unggul · GPA 3.74 / 4.00</p>
       </div>
     </div>
+
+    <ul class="tag-list">
+      <li>Corporate Legal Documentation</li>
+      <li>Contract Drafting</li>
+      <li>Employment Law</li>
+      <li>OSS RBA</li>
+      <li>Corporate Governance</li>
+      <li>Employee Relations</li>
+      <li>Corporate Secretarial</li>
+      <li>Licensing &amp; Permits</li>
+      <li>Policy &amp; SOP</li>
+      <li>Operational Reporting</li>
+    </ul>
   </section>
 
-  <section class="section kontak" id="kontak" data-section>
-    <p class="eyebrow"><span class="eyebrow-num">Pasal 06</span> — Kontak</p>
-    <h3 class="section-title">Mari Berdiskusi</h3>
-    <p class="section-lede">Terbuka untuk kolaborasi seputar legal, kepatuhan, dan hukum ketenagakerjaan.</p>
+  <section class="section contact" id="contact">
+    <p class="eyebrow">[ Contact ]</p>
+    <h3 class="section-title">Let's Work Together</h3>
+    <p class="contact-lede">Open for legal, compliance, and employment-law collaboration.</p>
 
     <div class="contact-grid">
-      <a class="contact-link" href="mailto:robisatianaa@gmail.com">
+      <a class="contact-card" href="mailto:robisatianaa@gmail.com">
         <span class="contact-label">Email</span>
         <span class="contact-value">robisatianaa@gmail.com</span>
       </a>
-      <a class="contact-link" href="tel:+6285817286483">
-        <span class="contact-label">Telepon</span>
+      <a class="contact-card" href="tel:+6285817286483">
+        <span class="contact-label">Phone</span>
         <span class="contact-value">+62 858-1728-6483</span>
       </a>
-      <a class="contact-link" href="https://www.linkedin.com/in/robisatianaa/" target="_blank" rel="noopener">
-        <span class="contact-label">LinkedIn</span>
-        <span class="contact-value">Robi Satiana</span>
-      </a>
-      <div class="contact-link contact-static">
-        <span class="contact-label">Lokasi</span>
-        <span class="contact-value">Bekasi, 17512</span>
+      <div class="contact-card contact-static">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">Bekasi, Indonesia</span>
       </div>
     </div>
 
     <footer class="footer">
-      <p>© 2023–2026 Robi Satiana. Seluruh hak dilindungi undang-undang.</p>
+      <p>© 2023–2026 Robi Satiana. All rights reserved.</p>
     </footer>
   </section>
 
