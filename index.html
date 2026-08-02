@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robi Satiana — Legal Officer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#101114',
+          inksoft: '#3a3c42',
+          gray: '#6b6f76',
+          graysoft: '#9a9da3',
+          paper: '#ffffff',
+          line: '#e6e6e9',
+          linesoft: '#f0f0f2',
+          fillsoft: '#f6f6f7',
+          accent: '#3a5fd9',
+        },
+        fontFamily: {
+          display: ['Anton', 'Archivo Black', 'sans-serif'],
+          sans: ['Inter', '-apple-system', 'sans-serif'],
+          mono: ['IBM Plex Mono', 'monospace'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: rgba(58,95,217,.16); color: #101114; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #3a5fd9; outline-offset: 3px; }
+
+  .name-outline{ color:transparent; -webkit-text-stroke:1.6px #101114; }
+
+  .hero-photo img{
+    filter: grayscale(1) contrast(1.08) brightness(1.14);
+    -webkit-mask-image: radial-gradient(ellipse 72% 88% at 50% 36%, black 52%, transparent 94%);
+    mask-image: radial-gradient(ellipse 72% 88% at 50% 36%, black 52%, transparent 94%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+
+  .arrow{ display:inline-block; transition:transform 180ms ease; }
+  .btn-pill:hover .arrow{ transform:translate(2px,-2px); }
+
+  .service-item:hover .service-num{ color:#3a5fd9; }
+  .service-item:hover{ padding-left:14px; background:#f6f6f7; }
+  .service-item{ transition:padding-left 200ms ease, background 200ms ease; }
+
+  .timeline-points li{ position:relative; padding-left:16px; }
+  .timeline-points li::before{
+    content:""; position:absolute; left:0; top:9px;
+    width:5px; height:5px; border-radius:50%; background:#e6e6e9;
+  }
+
+  .contact-card:not(.contact-static):hover{ background:#f6f6f7; }
+  .contact-card:not(.contact-static):hover .contact-value{ color:#3a5fd9; }
+
+  .tag-list li:hover{ border-color:#3a5fd9; color:#3a5fd9; }
+
+  #navLinks{ max-height:0; overflow:hidden; transition:max-height 260ms ease; }
+  #navLinks.open{ max-height:280px; }
+  .menu-toggle span{ transition:transform 200ms ease, opacity 200ms ease; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(5.5px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-5.5px) rotate(-45deg); }
+
+  @media (min-width: 768px){
+    #navLinks{ max-height:none !important; overflow:visible; position:static; }
+  }
+  @media (max-width: 900px){
+    .hero-name{ white-space:normal !important; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body class="bg-paper text-ink font-sans">
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-line" id="nav">
+  <div class="max-w-[1360px] mx-auto px-6 md:px-16 py-4 flex items-center justify-between gap-6">
+
+    <div class="inline-flex items-center gap-2 border border-line rounded-full px-3 py-2 md:px-4 whitespace-nowrap">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+      </span>
+      <span class="hidden sm:inline text-[13px] font-medium text-inksoft">Available for New Opportunities</span>
+    </div>
+
+    <button class="menu-toggle md:hidden w-10 h-10 border border-line rounded-full bg-white flex flex-col items-center justify-center gap-1" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="w-4 h-px bg-ink"></span><span class="w-4 h-px bg-ink"></span><span class="w-4 h-px bg-ink"></span>
+    </button>
+
+    <nav class="md:flex items-center gap-9 absolute md:static top-full left-0 right-0 md:max-h-none bg-white md:bg-transparent border-b md:border-0 border-line" id="navLinks">
+      <a href="#work" class="text-[14.5px] font-medium hover:text-accent transition-colors flex items-baseline gap-1 px-6 md:px-0 py-4 md:py-0 border-t md:border-0 border-linesoft w-full md:w-auto">Work <sup class="font-mono text-[10px] text-graysoft">[3]</sup></a>
+      <a href="#service" class="text-[14.5px] font-medium hover:text-accent transition-colors flex items-baseline gap-1 px-6 md:px-0 py-4 md:py-0 border-t md:border-0 border-linesoft w-full md:w-auto">Service <sup class="font-mono text-[10px] text-graysoft">[5]</sup></a>
+      <a href="#experience" class="text-[14.5px] font-medium hover:text-accent transition-colors flex items-baseline gap-1 px-6 md:px-0 py-4 md:py-0 border-t md:border-0 border-linesoft w-full md:w-auto">Experience <sup class="font-mono text-[10px] text-graysoft">[2y+]</sup></a>
+      <a href="#contact" class="text-[14.5px] font-medium hover:text-accent transition-colors px-6 md:px-0 py-4 md:py-0 border-t border-linesoft w-full md:w-auto block md:inline">Contact</a>
+    </nav>
+
+    <a href="#contact" class="hidden md:inline-flex btn-pill items-center gap-2 bg-ink text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-accent hover:-translate-y-px transition-all">
+      Let's Talk <span class="arrow">↗</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero relative max-w-[1360px] mx-auto px-6 md:px-16 pt-10 md:pt-14">
+    <h1 class="hero-name font-display font-normal uppercase leading-[0.86] tracking-tight text-[15vw] md:text-[9.5vw] lg:text-[168px] flex flex-wrap gap-x-[.14em] whitespace-nowrap" aria-label="Robi Satiana">
+      <span class="name-outline">ROBI</span><span class="text-ink">SATIANA</span>
+    </h1>
+
+    <div class="hero-photo relative w-[min(46vw,460px)] mx-auto -mt-[4.5vw] mb-[-40px] z-[2] pointer-events-none">
+      <img src="robi-portrait.png" alt="Robi Satiana" class="w-full block">
+    </div>
+
+    <div class="relative z-[3] flex flex-col md:flex-row justify-between items-stretch md:items-end gap-8 md:gap-8 pb-16 md:pb-[88px]">
+      <div class="max-w-[380px]">
+        <h2 class="font-sans text-[26px] font-bold mb-3.5">Legal Officer</h2>
+        <p class="text-[15px] leading-[1.65] text-gray mb-6">Helping companies stay compliant with Indonesian regulations — from contracts to corporate licensing.</p>
+        <a href="#contact" class="btn-pill inline-flex items-center gap-2 bg-ink text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-accent hover:-translate-y-px transition-all">
+          Let's collaborate <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="flex flex-col gap-3 items-stretch md:items-end">
+        <a href="https://linkedin.com/in/robisatiana" target="_blank" rel="noopener" class="btn-pill inline-flex items-center justify-center gap-2 border border-line text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-ink transition-colors">
+          <span class="w-[18px] h-[18px] inline-flex"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10.5v6M8 7.7v.01M12 16.5v-3.7c0-1.4 1-2.3 2.2-2.3 1.2 0 1.8.9 1.8 2.3v3.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          LinkedIn
+        </a>
+        <a href="mailto:robisatianaa@gmail.com" class="btn-pill inline-flex items-center justify-center gap-2 border border-line text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-ink transition-colors">
+          <span class="w-[18px] h-[18px] inline-flex"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Email
+        </a>
+        <a href="https://wa.me/6285817286483" target="_blank" rel="noopener" class="btn-pill inline-flex items-center justify-center gap-2 border border-line text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-ink transition-colors">
+          <span class="w-[18px] h-[18px] inline-flex"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 8.7c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .6.5.2.5.6 1.4.6 1.5.1.1.1.3 0 .4-.1.2-.1.3-.3.4-.1.2-.3.3-.4.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.5 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1 .2-.3.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.4.1.8-.1 1.2-.2.5-1.1 1-1.9 1.1-.7.1-1.5.1-4.7-1.9-3.2-2-3.9-3.6-4-3.9-.1-.3-.9-1.4-.9-2.7 0-1.3.7-1.9.9-2.2Z" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          WhatsApp
+        </a>
+        <a href="mailto:robisatianaa@gmail.com?subject=Request%20CV%20-%20Robi%20Satiana" class="btn-pill inline-flex items-center justify-center gap-2 border border-line text-ink text-sm font-semibold px-6 py-3 rounded-full hover:border-ink transition-colors">
+          <span class="w-[18px] h-[18px] inline-flex"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 11 12 15.5 16.5 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 18.5h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-[1360px] mx-auto px-6 md:px-16 py-16 md:py-[88px] border-t border-line" id="work">
+    <p class="font-mono text-xs tracking-wide text-gray mb-4">[ Work ]</p>
+    <h3 class="font-sans font-bold text-[26px] md:text-[36px] tracking-tight mb-12 max-w-[22ch]">Professional Experience</h3>
+
+    <ol class="flex flex-col max-w-[840px]">
+      <li class="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-3 md:gap-8 py-7 border-t border-linesoft">
+        <div class="font-mono text-xs text-accent pt-1 order-first">May 2025 — Mar 2026</div>
+        <div>
+          <h4 class="text-lg font-bold mb-1">Business Operations &amp; Legal Executive</h4>
+          <p class="text-[13px] text-gray mb-3.5">PT Cahaya Data Pertama · Central Jakarta</p>
+          <ul class="timeline-points flex flex-col gap-2">
+            <li class="text-sm leading-[1.7] text-inksoft">Drafted, reviewed and negotiated corporate &amp; commercial agreements — MSA, PKS, NDA, addendums, bipartite agreements.</li>
+            <li class="text-sm leading-[1.7] text-inksoft">Managed employment contracts and PKWT-to-PKWTT conversions in line with Indonesian labor regulations.</li>
+            <li class="text-sm leading-[1.7] text-inksoft">Administered BPJS Kesehatan &amp; Ketenagakerjaan, and led employee relations across HR, Finance, and GA.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-3 md:gap-8 py-7 border-t border-linesoft">
+        <div class="font-mono text-xs text-accent pt-1 order-first">Jun 2024 — Dec 2024</div>
+        <div>
+          <h4 class="text-lg font-bold mb-1">HR &amp; Legal Compliance Intern</h4>
+          <p class="text-[13px] text-gray mb-3.5">GOVOKASi Indonesia · South Jakarta</p>
+          <ul class="timeline-points flex flex-col gap-2">
+            <li class="text-sm leading-[1.7] text-inksoft">Drafted and reviewed legal documents and partnership agreements for local and international clients.</li>
+            <li class="text-sm leading-[1.7] text-inksoft">Designed 3 strategic roles with detailed SOPs, increasing recruitment efficiency by 25%.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-3 md:gap-8 py-7 border-t border-b border-linesoft">
+        <div class="font-mono text-xs text-accent pt-1 order-first">Nov 2024</div>
+        <div>
+          <h4 class="text-lg font-bold mb-1">Volunteer Crew &amp; Tenant Attendant</h4>
+          <p class="text-[13px] text-gray mb-3.5">Maxwell Leadership Indonesia x Merry Riana · South Tangerang</p>
+          <ul class="timeline-points flex flex-col gap-2">
+            <li class="text-sm leading-[1.7] text-inksoft">Supported event operations and booth management, ensuring smooth visitor engagement and logistics.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="max-w-[1360px] mx-auto px-6 md:px-16 py-16 md:py-[88px] border-t border-line" id="service">
+    <p class="font-mono text-xs tracking-wide text-gray mb-4">[ Service ]</p>
+    <h3 class="font-sans font-bold text-[26px] md:text-[36px] tracking-tight mb-12 max-w-[22ch]">What I Handle</h3>
+
+    <div class="flex flex-col max-w-[840px]">
+      <article class="service-item grid grid-cols-[36px_1fr] md:grid-cols-[56px_1fr] gap-6 items-start py-7 px-1 border-t border-linesoft">
+        <span class="service-num font-display text-2xl text-line transition-colors">01</span>
+        <div><h4 class="text-lg font-bold mb-1.5">Contract Review</h4><p class="text-sm leading-[1.65] text-gray max-w-[52ch]">MSA, PKS, NDA and addendum review to mitigate risk before signing.</p></div>
+      </article>
+      <article class="service-item grid grid-cols-[36px_1fr] md:grid-cols-[56px_1fr] gap-6 items-start py-7 px-1 border-t border-linesoft">
+        <span class="service-num font-display text-2xl text-line transition-colors">02</span>
+        <div><h4 class="text-lg font-bold mb-1.5">Compliance Projects</h4><p class="text-sm leading-[1.65] text-gray max-w-[52ch]">OSS RBA &amp; LKPM reporting, SIINas administration, Notary coordination.</p></div>
+      </article>
+      <article class="service-item grid grid-cols-[36px_1fr] md:grid-cols-[56px_1fr] gap-6 items-start py-7 px-1 border-t border-linesoft">
+        <span class="service-num font-display text-2xl text-line transition-colors">03</span>
+        <div><h4 class="text-lg font-bold mb-1.5">Legal Documentation</h4><p class="text-sm leading-[1.65] text-gray max-w-[52ch]">Structured, traceable legal &amp; HR document archives.</p></div>
+      </article>
+      <article class="service-item grid grid-cols-[36px_1fr] md:grid-cols-[56px_1fr] gap-6 items-start py-7 px-1 border-t border-linesoft">
+        <span class="service-num font-display text-2xl text-line transition-colors">04</span>
+        <div><h4 class="text-lg font-bold mb-1.5">Company Licensing</h4><p class="text-sm leading-[1.65] text-gray max-w-[52ch]">Business permits and corporate license monitoring via OSS RBA.</p></div>
+      </article>
+      <article class="service-item grid grid-cols-[36px_1fr] md:grid-cols-[56px_1fr] gap-6 items-start py-7 px-1 border-t border-b border-linesoft">
+        <span class="service-num font-display text-2xl text-line transition-colors">05</span>
+        <div><h4 class="text-lg font-bold mb-1.5">Employment Compliance</h4><p class="text-sm leading-[1.65] text-gray max-w-[52ch]">PKWT-to-PKWTT conversion, industrial relations, BPJS administration.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="max-w-[1360px] mx-auto px-6 md:px-16 py-16 md:py-[88px] border-t border-line" id="experience">
+    <p class="font-mono text-xs tracking-wide text-gray mb-4">[ Background ]</p>
+    <h3 class="font-sans font-bold text-[26px] md:text-[36px] tracking-tight mb-12 max-w-[22ch]">Education &amp; Skills</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-3 md:gap-8 max-w-[840px] py-6 mb-9 border-t border-b border-linesoft">
+      <div class="font-mono text-xs text-accent pt-1 order-first">Mar 2020 — Aug 2023</div>
+      <div>
+        <h4 class="text-lg font-bold mb-1.5">Bachelor of Laws (S.H.)</h4>
+        <p class="text-[13.5px] text-gray">Universitas Esa Unggul · GPA 3.74 / 4.00</p>
+      </div>
+    </div>
+
+    <ul class="tag-list flex flex-wrap gap-2.5 max-w-[840px]">
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">Corporate Legal Documentation</li>
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">Contract Drafting</li>
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">Employment Law</li>
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">OSS RBA</li>
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">Corporate Governance</li>
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">Employee Relations</li>
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">Corporate Secretarial</li>
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">Licensing &amp; Permits</li>
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">Policy &amp; SOP</li>
+      <li class="text-[13px] font-medium border border-line rounded-full px-4 py-2.5 text-inksoft transition-colors">Operational Reporting</li>
+    </ul>
+  </section>
+
+  <section class="max-w-[1360px] mx-auto px-6 md:px-16 py-16 md:py-[88px] border-t border-line" id="contact">
+    <p class="font-mono text-xs tracking-wide text-gray mb-4">[ Contact ]</p>
+    <h3 class="font-sans font-bold text-[26px] md:text-[36px] tracking-tight mb-3 max-w-[22ch]">Let's Work Together</h3>
+    <p class="text-[15px] text-gray max-w-[48ch] mb-11">Open for legal, compliance, and employment-law collaboration.</p>
+
+    <div class="contact-grid grid grid-cols-1 md:grid-cols-3 gap-px bg-line border border-line max-w-[840px] mb-14">
+      <a class="contact-card bg-white px-6 py-6 flex flex-col gap-2.5 transition-colors" href="mailto:robisatianaa@gmail.com">
+        <span class="font-mono text-[10px] tracking-wide uppercase text-graysoft">Email</span>
+        <span class="contact-value text-sm font-semibold text-ink transition-colors">robisatianaa@gmail.com</span>
+      </a>
+      <a class="contact-card bg-white px-6 py-6 flex flex-col gap-2.5 transition-colors" href="tel:+6285817286483">
+        <span class="font-mono text-[10px] tracking-wide uppercase text-graysoft">Phone</span>
+        <span class="contact-value text-sm font-semibold text-ink transition-colors">+62 858-1728-6483</span>
+      </a>
+      <div class="contact-card contact-static bg-white px-6 py-6 flex flex-col gap-2.5">
+        <span class="font-mono text-[10px] tracking-wide uppercase text-graysoft">Location</span>
+        <span class="contact-value text-sm font-semibold text-ink">Bekasi, Indonesia</span>
+      </div>
+    </div>
+
+    <footer class="text-xs text-graysoft">
+      <p>© 2023–2026 Robi Satiana. All rights reserved.</p>
+    </footer>
+  </section>
+
+</main>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
